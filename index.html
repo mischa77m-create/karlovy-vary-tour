@@ -1,0 +1,3107 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Karlovy Vary Travel | Тури та відпочинок</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+   GLOBAL
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"DM Sans",Arial,sans-serif;
+    background:#f5f3ed;
+    color:#17231f;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+button,
+input,
+select,
+textarea{
+    font:inherit;
+}
+
+.container{
+    width:min(1200px,92%);
+    margin:auto;
+}
+
+h1,
+h2,
+h3{
+    font-family:"Playfair Display",Georgia,serif;
+    line-height:1.05;
+}
+
+/* =========================
+   TOP BAR
+========================= */
+
+.topbar{
+    background:#173c2e;
+    color:white;
+    padding:9px 0;
+    font-size:13px;
+}
+
+.topbar .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(245,243,237,.92);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(0,0,0,.08);
+}
+
+nav{
+    min-height:78px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:800;
+}
+
+.logo-circle{
+    width:44px;
+    height:44px;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    background:#173c2e;
+    color:#fff;
+    font-family:"Playfair Display",serif;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:26px;
+    font-size:14px;
+    font-weight:700;
+}
+
+.nav-links a:hover{
+    color:#2d654e;
+}
+
+.nav-button{
+    background:#173c2e;
+    color:#fff;
+    padding:12px 19px;
+    border-radius:50px;
+}
+
+.menu-button{
+    display:none;
+    border:none;
+    background:none;
+    font-size:29px;
+    cursor:pointer;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    padding:35px 0 85px;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.08fr .92fr;
+    gap:35px;
+    align-items:center;
+}
+
+.hero-text{
+    padding:30px 0;
+}
+
+.kicker{
+    color:#2d654e;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+}
+
+.kicker::before{
+    content:"";
+    width:30px;
+    height:2px;
+    background:#c8a45f;
+}
+
+.hero h1{
+    font-size:clamp(50px,6vw,85px);
+    margin:20px 0;
+}
+
+.hero p{
+    max-width:690px;
+    color:#68746f;
+    font-size:19px;
+}
+
+.hero-buttons{
+    margin-top:30px;
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50px;
+    padding:14px 22px;
+    border:1px solid #173c2e;
+    font-weight:800;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.btn-primary{
+    background:#173c2e;
+    color:white;
+}
+
+.btn-outline{
+    color:#173c2e;
+    background:transparent;
+}
+
+.hero-image{
+    height:650px;
+    position:relative;
+    border-radius:35px;
+    overflow:hidden;
+    box-shadow:0 20px 60px rgba(20,40,30,.16);
+}
+
+.hero-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.image-card{
+    position:absolute;
+    left:18px;
+    right:18px;
+    bottom:18px;
+    background:rgba(255,255,255,.94);
+    border-radius:21px;
+    padding:18px;
+}
+
+.image-card small{
+    display:block;
+    color:#68746f;
+}
+
+.image-card strong{
+    font-size:20px;
+}
+
+/* =========================
+   STATS
+========================= */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+    margin-top:28px;
+}
+
+.stat{
+    background:white;
+    border:1px solid rgba(0,0,0,.09);
+    border-radius:18px;
+    padding:17px;
+}
+
+.stat strong{
+    display:block;
+    color:#2d654e;
+    font-size:27px;
+}
+
+.stat span{
+    color:#68746f;
+    font-size:12px;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section{
+    padding:95px 0;
+}
+
+.section-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    gap:30px;
+    margin-bottom:35px;
+}
+
+.section-top h2{
+    font-size:clamp(38px,5vw,60px);
+    max-width:750px;
+}
+
+.section-top p{
+    max-width:500px;
+    color:#68746f;
+}
+
+/* =========================
+   TOURS
+========================= */
+
+.tours-area{
+    background:#eaf0eb;
+    padding:28px;
+    border-radius:35px;
+}
+
+.filters{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:25px;
+}
+
+.filter{
+    background:white;
+    color:#17231f;
+    border:1px solid rgba(0,0,0,.1);
+    border-radius:50px;
+    padding:10px 15px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.filter.active{
+    background:#173c2e;
+    color:#fff;
+}
+
+.tours{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.tour{
+    background:#fff;
+    border-radius:24px;
+    overflow:hidden;
+    border:1px solid rgba(0,0,0,.09);
+    transition:.25s;
+}
+
+.tour:hover{
+    transform:translateY(-7px);
+    box-shadow:0 20px 50px rgba(20,40,30,.13);
+}
+
+.tour.hide{
+    display:none;
+}
+
+.tour-image{
+    height:230px;
+    position:relative;
+}
+
+.tour-image img{
+    height:100%;
+    object-fit:cover;
+}
+
+.tour-tag{
+    position:absolute;
+    top:15px;
+    left:15px;
+    padding:7px 11px;
+    background:white;
+    border-radius:50px;
+    color:#173c2e;
+    font-size:11px;
+    font-weight:800;
+}
+
+.tour-body{
+    padding:21px;
+}
+
+.tour-body h3{
+    font-size:28px;
+    margin-bottom:8px;
+}
+
+.tour-body p{
+    color:#68746f;
+    font-size:14px;
+}
+
+.tags{
+    display:flex;
+    gap:7px;
+    flex-wrap:wrap;
+    margin:15px 0;
+}
+
+.tags span{
+    background:#eaf0eb;
+    padding:6px 10px;
+    border-radius:50px;
+    font-size:11px;
+    font-weight:700;
+}
+
+.tour-footer{
+    padding-top:15px;
+    border-top:1px solid rgba(0,0,0,.1);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.price{
+    font-size:22px;
+    font-weight:800;
+    color:#2d654e;
+}
+
+.price small{
+    font-size:11px;
+    color:#68746f;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.about-image{
+    overflow:hidden;
+    border-radius:30px;
+    box-shadow:0 20px 60px rgba(20,40,30,.14);
+}
+
+.about-image img{
+    height:620px;
+    object-fit:cover;
+}
+
+.about h2{
+    font-size:56px;
+    margin:15px 0;
+}
+
+.about p{
+    color:#68746f;
+    margin-top:15px;
+}
+
+.check-list{
+    margin-top:25px;
+    display:grid;
+    gap:14px;
+}
+
+.check{
+    display:flex;
+    gap:12px;
+}
+
+.check-icon{
+    width:27px;
+    height:27px;
+    border-radius:50%;
+    background:#eaf0eb;
+    color:#2d654e;
+    display:grid;
+    place-items:center;
+    font-weight:900;
+    flex:none;
+}
+
+.info-box{
+    background:white;
+    border:1px solid rgba(0,0,0,.1);
+    border-radius:20px;
+    padding:20px;
+    margin-top:25px;
+}
+
+.info-box b{
+    display:block;
+    margin-bottom:5px;
+}
+
+/* =========================
+   PLACES
+========================= */
+
+.places-section{
+    background:#eaf0eb;
+}
+
+.places{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.place{
+    position:relative;
+    height:430px;
+    border-radius:26px;
+    overflow:hidden;
+    color:white;
+}
+
+.place img{
+    height:100%;
+    object-fit:cover;
+}
+
+.place::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        transparent 25%,
+        rgba(10,25,18,.88)
+    );
+}
+
+.place-content{
+    position:absolute;
+    z-index:2;
+    left:25px;
+    right:25px;
+    bottom:25px;
+}
+
+.place-content small{
+    text-transform:uppercase;
+    letter-spacing:.1em;
+}
+
+.place-content h3{
+    font-size:35px;
+    margin:6px 0;
+}
+
+.place-content p{
+    font-size:14px;
+}
+
+/* =========================
+   WELLNESS
+========================= */
+
+.wellness{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:17px;
+}
+
+.wellness-card{
+    background:white;
+    border:1px solid rgba(0,0,0,.1);
+    border-radius:23px;
+    padding:25px;
+}
+
+.icon{
+    font-size:34px;
+    margin-bottom:12px;
+}
+
+.wellness-card h3{
+    font-size:24px;
+    margin-bottom:8px;
+}
+
+.wellness-card p{
+    color:#68746f;
+    font-size:13px;
+}
+
+/* =========================
+   ROUTE
+========================= */
+
+.route{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.route-card{
+    background:white;
+    border:1px solid rgba(0,0,0,.1);
+    border-radius:23px;
+    padding:22px;
+}
+
+.route-number{
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    background:#173c2e;
+    color:white;
+    display:grid;
+    place-items:center;
+    font-weight:800;
+    margin-bottom:16px;
+}
+
+.route-card h3{
+    font-size:25px;
+    margin-bottom:10px;
+}
+
+.route-card li{
+    color:#68746f;
+    font-size:13px;
+    margin:7px 0;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery{
+    display:grid;
+    grid-template-columns:1.1fr .9fr 1fr;
+    grid-auto-rows:220px;
+    gap:13px;
+}
+
+.gallery-item{
+    border-radius:20px;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.gallery-item img{
+    height:100%;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.06);
+}
+
+.gallery-tall{
+    grid-row:span 2;
+}
+
+.gallery-wide{
+    grid-column:span 2;
+}
+
+/* =========================
+   FAQ
+========================= */
+
+.faq{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:40px;
+}
+
+.faq h2{
+    font-size:56px;
+    margin-top:15px;
+}
+
+.faq-list{
+    display:grid;
+    gap:10px;
+}
+
+.faq-item{
+    background:white;
+    border:1px solid rgba(0,0,0,.1);
+    border-radius:18px;
+    overflow:hidden;
+}
+
+.faq-question{
+    width:100%;
+    border:none;
+    background:none;
+    padding:18px;
+    display:flex;
+    justify-content:space-between;
+    cursor:pointer;
+    font-weight:800;
+    text-align:left;
+}
+
+.faq-answer{
+    display:none;
+    padding:0 18px 18px;
+    color:#68746f;
+    font-size:14px;
+}
+
+.faq-item.active .faq-answer{
+    display:block;
+}
+
+/* =========================
+   BOOKING
+========================= */
+
+.booking-section{
+    background:#173c2e;
+    color:white;
+}
+
+.booking-grid{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:30px;
+}
+
+.contact-box{
+    border:1px solid rgba(255,255,255,.13);
+    background:rgba(255,255,255,.06);
+    border-radius:25px;
+    padding:27px;
+}
+
+.contact-box h3{
+    font-size:35px;
+}
+
+.contact-box p{
+    margin:12px 0;
+    color:rgba(255,255,255,.7);
+}
+
+.contact-line{
+    padding:15px 0;
+    border-bottom:1px solid rgba(255,255,255,.12);
+}
+
+.contact-line small{
+    display:block;
+    color:rgba(255,255,255,.5);
+}
+
+.booking-form{
+    background:white;
+    color:#17231f;
+    padding:27px;
+    border-radius:25px;
+    display:grid;
+    gap:15px;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+}
+
+label{
+    display:grid;
+    gap:7px;
+    font-size:12px;
+    font-weight:800;
+}
+
+input,
+select,
+textarea{
+    border:1px solid rgba(0,0,0,.12);
+    border-radius:13px;
+    padding:13px;
+    background:#fafaf7;
+    outline:none;
+}
+
+textarea{
+    min-height:120px;
+    resize:vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    border-color:#2d654e;
+}
+
+.total-box{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#eaf0eb;
+    padding:14px;
+    border-radius:16px;
+}
+
+.total-box strong{
+    color:#2d654e;
+    font-size:23px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#0c2118;
+    color:white;
+    padding:42px 0;
+}
+
+.footer{
+    display:grid;
+    grid-template-columns:1.2fr .8fr .8fr;
+    gap:30px;
+}
+
+.footer p,
+.footer a{
+    color:rgba(255,255,255,.6);
+    font-size:14px;
+}
+
+.copyright{
+    border-top:1px solid rgba(255,255,255,.1);
+    margin-top:25px;
+    padding-top:20px;
+    color:rgba(255,255,255,.4);
+    font-size:12px;
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.8);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:2000;
+    padding:20px;
+}
+
+.modal.active{
+    display:flex;
+}
+
+.modal-content{
+    width:min(700px,100%);
+    background:white;
+    color:#17231f;
+    border-radius:25px;
+    padding:28px;
+    position:relative;
+}
+
+.modal-content h2{
+    font-size:40px;
+    margin:12px 0;
+}
+
+.modal-content p{
+    color:#68746f;
+}
+
+.close-modal{
+    position:absolute;
+    right:15px;
+    top:8px;
+    border:none;
+    background:none;
+    font-size:35px;
+    cursor:pointer;
+}
+
+/* =========================
+   LIGHTBOX
+========================= */
+
+.lightbox{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.9);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:3000;
+    padding:25px;
+}
+
+.lightbox.active{
+    display:flex;
+}
+
+.lightbox img{
+    max-width:95%;
+    max-height:90vh;
+    object-fit:contain;
+    border-radius:15px;
+}
+
+.close-lightbox{
+    position:fixed;
+    top:10px;
+    right:25px;
+    color:white;
+    background:none;
+    border:none;
+    font-size:43px;
+    cursor:pointer;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:1050px){
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:78px;
+        left:4%;
+        right:4%;
+        background:white;
+        padding:18px;
+        border-radius:20px;
+        box-shadow:0 20px 50px rgba(0,0,0,.15);
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .nav-links.show{
+        display:flex;
+    }
+
+    .menu-button{
+        display:block;
+    }
+
+    .hero-grid,
+    .about,
+    .booking-grid,
+    .faq{
+        grid-template-columns:1fr;
+    }
+
+    .hero-image{
+        height:500px;
+    }
+
+    .tours{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .wellness{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .route{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .footer{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:680px){
+
+    section{
+        padding:70px 0;
+    }
+
+    .topbar .container span{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:48px;
+    }
+
+    .stats{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .tours,
+    .places,
+    .wellness,
+    .route,
+    .gallery,
+    .form-grid,
+    .footer{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-wide{
+        grid-column:span 1;
+    }
+
+    .gallery-tall{
+        grid-row:span 1;
+    }
+
+    .gallery-item{
+        height:260px;
+    }
+
+    .section-top{
+        display:block;
+    }
+
+    .section-top p{
+        margin-top:14px;
+    }
+
+    .hero-image{
+        height:420px;
+    }
+
+    .about h2,
+    .faq h2{
+        font-size:43px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- TOP BAR -->
+
+<div class="topbar">
+
+<div class="container">
+
+<span>
+Карлові Вари · Чехія · Тури та відпочинок
+</span>
+
+<a href="tel:+420723677258">
++420 723 677 258
+</a>
+
+</div>
+
+</div>
+
+
+<!-- HEADER -->
+
+<header>
+
+<div class="container">
+
+<nav>
+
+<a href="#home" class="logo">
+
+<span class="logo-circle">
+KV
+</span>
+
+<span>
+Karlovy Vary Travel
+</span>
+
+</a>
+
+
+<div class="nav-links" id="navLinks">
+
+<a href="#tours">
+Тури
+</a>
+
+<a href="#about">
+Про місто
+</a>
+
+<a href="#wellness">
+Оздоровлення
+</a>
+
+<a href="#route">
+Маршрут
+</a>
+
+<a href="#gallery">
+Галерея
+</a>
+
+<a href="#booking" class="nav-button">
+Забронювати
+</a>
+
+</div>
+
+
+<button class="menu-button" id="menuButton">
+☰
+</button>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<main id="home">
+
+<section class="hero">
+
+<div class="container hero-grid">
+
+
+<div class="hero-text">
+
+<span class="kicker">
+Перлина Чехії
+</span>
+
+<h1>
+Карлові Вари —
+місто джерел,
+архітектури та відпочинку
+</h1>
+
+<p>
+Відкрийте для себе один із найвідоміших
+курортів Центральної Європи. Мінеральні
+джерела, величні колонади, річка Тепла,
+історична архітектура та зелень лісистих пагорбів.
+</p>
+
+
+<div class="hero-buttons">
+
+<a href="#tours" class="btn btn-primary">
+Переглянути тури →
+</a>
+
+<a href="tel:+420723677258" class="btn btn-outline">
+📞 Зателефонувати
+</a>
+
+</div>
+
+
+<div class="stats">
+
+<div class="stat">
+<strong>6</strong>
+<span>форматів турів</span>
+</div>
+
+<div class="stat">
+<strong>1–3</strong>
+<span>дні відпочинку</span>
+</div>
+
+<div class="stat">
+<strong>KV</strong>
+<span>Карлові Вари</span>
+</div>
+
+<div class="stat">
+<strong>24/7</strong>
+<span>заявки онлайн</span>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="hero-image">
+
+<img
+src="images/leonhard_niederwimmer-city-6471535.jpg"
+alt="Карлові Вари"
+>
+
+<div class="image-card">
+
+<small>
+Фірмовий маршрут
+</small>
+
+<strong>
+Тепла · колонади · джерела · центр
+</strong>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- TOURS -->
+
+<section id="tours">
+
+<div class="container">
+
+<div class="section-top">
+
+<div>
+
+<span class="kicker">
+Наші тури
+</span>
+
+<h2>
+Оберіть свій формат подорожі
+</h2>
+
+</div>
+
+<p>
+Одноденні екскурсії, wellness,
+природа, архітектура та
+тури вихідного дня.
+</p>
+
+</div>
+
+
+<div class="tours-area">
+
+
+<div class="filters">
+
+<button class="filter active" data-filter="all">
+Усі
+</button>
+
+<button class="filter" data-filter="day">
+1 день
+</button>
+
+<button class="filter" data-filter="wellness">
+Wellness
+</button>
+
+<button class="filter" data-filter="history">
+Історія
+</button>
+
+<button class="filter" data-filter="nature">
+Природа
+</button>
+
+</div>
+
+
+<div class="tours">
+
+
+<!-- TOUR 1 -->
+
+<article class="tour" data-category="day history">
+
+<div class="tour-image">
+
+<img
+src="images/leonhard_niederwimmer-city-6471535.jpg"
+alt="Центр Карлових Варів"
+>
+
+<span class="tour-tag">
+Популярний
+</span>
+
+</div>
+
+
+<div class="tour-body">
+
+<h3>
+Класичний Карлові Вари
+</h3>
+
+<p>
+Центр міста, річка Тепла,
+історичні фасади, колонади
+та вільний час.
+</p>
+
+<div class="tags">
+
+<span>1 день</span>
+<span>центр</span>
+<span>екскурсія</span>
+
+</div>
+
+<div class="tour-footer">
+
+<div class="price">
+35 €
+<small>/ особа</small>
+</div>
+
+<button
+class="btn btn-outline details"
+data-title="Класичний Карлові Вари"
+data-text="Спокійна екскурсія центральною частиною Карлових Варів: річка Тепла, історичні будівлі, колонади, прогулянки та вільний час."
+>
+Деталі
+</button>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- TOUR 2 -->
+
+<article class="tour" data-category="day wellness">
+
+<div class="tour-image">
+
+<img
+src="images/dife88-waters-3284424.jpg"
+alt="Мінеральне джерело"
+>
+
+<span class="tour-tag">
+Wellness
+</span>
+
+</div>
+
+
+<div class="tour-body">
+
+<h3>
+Колонади та джерела
+</h3>
+
+<p>
+Знайомство з курортною традицією
+міста, джерелами та колонадами.
+</p>
+
+<div class="tags">
+
+<span>3–4 год</span>
+<span>джерела</span>
+<span>релакс</span>
+
+</div>
+
+<div class="tour-footer">
+
+<div class="price">
+25 €
+<small>/ особа</small>
+</div>
+
+<button
+class="btn btn-outline details"
+data-title="Колонади та джерела"
+data-text="Маршрут навколо знаменитих колонад та мінеральних джерел із часом для спокійної прогулянки."
+>
+Деталі
+</button>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- TOUR 3 -->
+
+<article class="tour" data-category="day nature">
+
+<div class="tour-image">
+
+<img
+src="images/tatutati-karlovy-vary-1896927.jpg"
+alt="Парк"
+>
+
+</div>
+
+
+<div class="tour-body">
+
+<h3>
+Зелений Карлові Вари
+</h3>
+
+<p>
+Парки, лісові схили, водойми
+та красиві прогулянкові маршрути.
+</p>
+
+<div class="tags">
+
+<span>1 день</span>
+<span>природа</span>
+<span>фото</span>
+
+</div>
+
+<div class="tour-footer">
+
+<div class="price">
+45 €
+<small>/ особа</small>
+</div>
+
+<button
+class="btn btn-outline details"
+data-title="Зелений Карлові Вари"
+data-text="Природний маршрут для тих, хто хоче поєднати архітектуру міста зі спокійними прогулянками серед зелені."
+>
+Деталі
+</button>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- TOUR 4 -->
+
+<article class="tour" data-category="wellness">
+
+<div class="tour-image">
+
+<img
+src="images/dife88-waters-3284424.jpg"
+alt="Термальна вода"
+>
+
+<span class="tour-tag">
+Relax
+</span>
+
+</div>
+
+
+<div class="tour-body">
+
+<h3>
+Термальний релакс
+</h3>
+
+<p>
+Курортна атмосфера, вода,
+прогулянки та вільний час.
+</p>
+
+<div class="tags">
+
+<span>1 день</span>
+<span>релакс</span>
+<span>вода</span>
+
+</div>
+
+<div class="tour-footer">
+
+<div class="price">
+55 €
+<small>/ особа</small>
+</div>
+
+<button
+class="btn btn-outline details"
+data-title="Термальний релакс"
+data-text="Розмірений формат відпочинку з акцентом на курортну атмосферу. Оздоровчі процедури залежать від обраного закладу."
+>
+Деталі
+</button>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- TOUR 5 -->
+
+<article class="tour" data-category="history">
+
+<div class="tour-image">
+
+<img
+src="images/ralfgervink-karlsbad-2830897.jpg"
+alt="Архітектура"
+>
+
+</div>
+
+
+<div class="tour-body">
+
+<h3>
+Архітектурна історія
+</h3>
+
+<p>
+Храми, колонади, декоративні
+фасади та історичні споруди.
+</p>
+
+<div class="tags">
+
+<span>пів дня</span>
+<span>історія</span>
+<span>архітектура</span>
+
+</div>
+
+<div class="tour-footer">
+
+<div class="price">
+30 €
+<small>/ особа</small>
+</div>
+
+<button
+class="btn btn-outline details"
+data-title="Архітектурна історія"
+data-text="Прогулянка через історичні будівлі, храми, колонади та декоративні фасади Карлових Варів."
+>
+Деталі
+</button>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- TOUR 6 -->
+
+<article class="tour" data-category="wellness nature">
+
+<div class="tour-image">
+
+<img
+src="images/ralfgervink-karlsbad-2831021.jpg"
+alt="Колонада"
+>
+
+</div>
+
+
+<div class="tour-body">
+
+<h3>
+Вікенд у Карлових Варах
+</h3>
+
+<p>
+2–3 дні: місто, джерела,
+природа, кафе та відпочинок.
+</p>
+
+<div class="tags">
+
+<span>2–3 дні</span>
+<span>вікенд</span>
+<span>комфорт</span>
+
+</div>
+
+<div class="tour-footer">
+
+<div class="price">
+129 €
+<small>/ особа</small>
+</div>
+
+<button
+class="btn btn-outline details"
+data-title="Вікенд у Карлових Варах"
+data-text="Комплексний формат на 2–3 дні для знайомства з центром міста, джерелами, природою та курортною атмосферою."
+>
+Деталі
+</button>
+
+</div>
+
+</div>
+
+</article>
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="container about">
+
+
+<div class="about-image">
+
+<img
+src="images/ralfgervink-karlsbad-2830897.jpg"
+alt="Карлові Вари"
+>
+
+</div>
+
+
+<div>
+
+<span class="kicker">
+Про місто
+</span>
+
+<h2>
+Місто цілющих джерел,
+архітектури та спокою
+</h2>
+
+<p>
+Карлові Вари розташовані в мальовничій
+долині серед лісистих пагорбів. Місто
+відоме мінеральними джерелами,
+колонадами, історичними будівлями,
+парками та курортною атмосферою.
+</p>
+
+<p>
+Через центральну частину міста
+проходить річка Тепла, а навколо
+історичного центру розташовані зелені
+схили та прогулянкові маршрути.
+</p>
+
+
+<div class="check-list">
+
+<div class="check">
+
+<div class="check-icon">✓</div>
+
+<div>
+<b>Мінеральні джерела</b>
+<p>
+Головний символ міста та
+частина курортної традиції.
+</p>
+</div>
+
+</div>
+
+
+<div class="check">
+
+<div class="check-icon">✓</div>
+
+<div>
+<b>Колонади</b>
+<p>
+Величні архітектурні споруди
+в історичному центрі.
+</p>
+</div>
+
+</div>
+
+
+<div class="check">
+
+<div class="check-icon">✓</div>
+
+<div>
+<b>Природа</b>
+<p>
+Парки, ліси та пагорби
+оточують місто.
+</p>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="info-box">
+
+<b>
+💧 Важливо про лікувальну воду
+</b>
+
+<span>
+Спосіб і кількість вживання лікувальної
+мінеральної води визначаються
+індивідуально відповідно до рекомендацій
+медичного спеціаліста.
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PLACES -->
+
+<section class="places-section">
+
+<div class="container">
+
+<div class="section-top">
+
+<div>
+
+<span class="kicker">
+Пам'ятки
+</span>
+
+<h2>
+Що подивитися в Карлових Варах
+</h2>
+
+</div>
+
+<p>
+Архітектура, вода та природа створюють
+унікальну атмосферу міста.
+</p>
+
+</div>
+
+
+<div class="places">
+
+
+<article class="place">
+
+<img
+src="images/ralfgervink-mill-colonnade-2829803.jpg"
+alt="Млинська колонада"
+>
+
+<div class="place-content">
+
+<small>
+01 · Архітектура
+</small>
+
+<h3>
+Млинська колонада
+</h3>
+
+<p>
+Одна з найвідоміших архітектурних
+візитівок курорту.
+</p>
+
+</div>
+
+</article>
+
+
+<article class="place">
+
+<img
+src="images/leonhard_niederwimmer-city-6471535.jpg"
+alt="Річка Тепла"
+>
+
+<div class="place-content">
+
+<small>
+02 · Місто
+</small>
+
+<h3>
+Річка Тепла
+</h3>
+
+<p>
+Набережні, мости та історичні
+будівлі центральної частини.
+</p>
+
+</div>
+
+</article>
+
+
+<article class="place">
+
+<img
+src="images/tatutati-karlovy-vary-1896927.jpg"
+alt="Парк"
+>
+
+<div class="place-content">
+
+<small>
+03 · Природа
+</small>
+
+<h3>
+Парки та зелені схили
+</h3>
+
+<p>
+Мальовничі місця для прогулянок
+і відпочинку.
+</p>
+
+</div>
+
+</article>
+
+
+<article class="place">
+
+<img
+src="images/ralfgervink-karlsbad-2831021.jpg"
+alt="Колонада"
+>
+
+<div class="place-content">
+
+<small>
+04 · Атмосфера
+</small>
+
+<h3>
+Курортна класика
+</h3>
+
+<p>
+Колони, арки, декоративні фасади
+та історичний стиль міста.
+</p>
+
+</div>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- WELLNESS -->
+
+<section id="wellness">
+
+<div class="container">
+
+<div class="section-top">
+
+<div>
+
+<span class="kicker">
+Wellness
+</span>
+
+<h2>
+Оздоровчий відпочинок
+</h2>
+
+</div>
+
+<p>
+Конкретна програма залежить від обраного
+закладу та рекомендацій спеціаліста.
+</p>
+
+</div>
+
+
+<div class="wellness">
+
+<div class="wellness-card">
+<div class="icon">💧</div>
+<h3>Мінеральні джерела</h3>
+<p>
+Мінеральні води є невід'ємною
+частиною історії міста.
+</p>
+</div>
+
+
+<div class="wellness-card">
+<div class="icon">🛁</div>
+<h3>Водні процедури</h3>
+<p>
+Залежно від санаторію можуть
+пропонуватися різні процедури.
+</p>
+</div>
+
+
+<div class="wellness-card">
+<div class="icon">🤲</div>
+<h3>Масаж</h3>
+<p>
+Релаксаційні програми для
+комфортного відпочинку.
+</p>
+</div>
+
+
+<div class="wellness-card">
+<div class="icon">🌲</div>
+<h3>Прогулянки</h3>
+<p>
+Парки, набережні та лісові
+маршрути навколо міста.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ROUTE -->
+
+<section id="route">
+
+<div class="container">
+
+<div class="section-top">
+
+<div>
+
+<span class="kicker">
+Маршрут
+</span>
+
+<h2>
+Приклад ідеального дня
+</h2>
+
+</div>
+
+<p>
+Приклад програми можна адаптувати
+під ваші побажання.
+</p>
+
+</div>
+
+
+<div class="route">
+
+
+<div class="route-card">
+
+<div class="route-number">
+1
+</div>
+
+<h3>
+Ранок
+</h3>
+
+<ul>
+
+<li>Зустріч</li>
+<li>Центр міста</li>
+<li>Перша колонада</li>
+
+</ul>
+
+</div>
+
+
+<div class="route-card">
+
+<div class="route-number">
+2
+</div>
+
+<h3>
+Джерела
+</h3>
+
+<ul>
+
+<li>Мінеральні джерела</li>
+<li>Прогулянка</li>
+<li>Фотографії</li>
+
+</ul>
+
+</div>
+
+
+<div class="route-card">
+
+<div class="route-number">
+3
+</div>
+
+<h3>
+День
+</h3>
+
+<ul>
+
+<li>Обід</li>
+<li>Вільний час</li>
+<li>Місто</li>
+
+</ul>
+
+</div>
+
+
+<div class="route-card">
+
+<div class="route-number">
+4
+</div>
+
+<h3>
+Вечір
+</h3>
+
+<ul>
+
+<li>Парк</li>
+<li>Набережна</li>
+<li>Кава</li>
+
+</ul>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- GALLERY -->
+
+<section id="gallery">
+
+<div class="container">
+
+<div class="section-top">
+
+<div>
+
+<span class="kicker">
+Галерея
+</span>
+
+<h2>
+Карлові Вари в фотографіях
+</h2>
+
+</div>
+
+<p>
+Натисніть на фотографію,
+щоб відкрити її у великому форматі.
+</p>
+
+</div>
+
+
+<div class="gallery">
+
+
+<div class="gallery-item gallery-tall">
+
+<img
+src="images/tatutati-karlovy-vary-1896927.jpg"
+alt="Парк"
+>
+
+</div>
+
+
+<div class="gallery-item gallery-wide">
+
+<img
+src="images/leonhard_niederwimmer-city-6471535.jpg"
+alt="Центр"
+>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="images/dife88-waters-3284424.jpg"
+alt="Джерело"
+>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="images/ralfgervink-karlsbad-2830897.jpg"
+alt="Храм"
+>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="images/ralfgervink-mill-colonnade-2829803.jpg"
+alt="Колонада"
+>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="images/ralfgervink-karlsbad-2831021.jpg"
+alt="Архітектура"
+>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="images/ralfgervink-mill-colonnade-2829735.jpg"
+alt="Колонада"
+>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section>
+
+<div class="container faq">
+
+<div>
+
+<span class="kicker">
+FAQ
+</span>
+
+<h2>
+Поширені запитання
+</h2>
+
+<p style="color:#68746f;margin-top:15px;">
+Все, що потрібно знати перед поїздкою.
+</p>
+
+</div>
+
+
+<div class="faq-list">
+
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+Чи можна замовити індивідуальний тур?
+
+<span>+</span>
+
+</button>
+
+<div class="faq-answer">
+
+Так. У формі бронювання можна
+вказати свої дати, кількість людей
+та побажання щодо маршруту.
+
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+Скільки триває тур?
+
+<span>+</span>
+
+</button>
+
+<div class="faq-answer">
+
+На сайті представлені маршрути
+від кількох годин до 2–3 днів.
+
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+Чи можна додати wellness-процедури?
+
+<span>+</span>
+
+</button>
+
+<div class="faq-answer">
+
+Це залежить від конкретного
+санаторію або wellness-закладу.
+
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+Як забронювати тур?
+
+<span>+</span>
+
+</button>
+
+<div class="faq-answer">
+
+Заповніть форму нижче або
+зателефонуйте за номером
++420 723 677 258.
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- BOOKING -->
+
+<section id="booking" class="booking-section">
+
+<div class="container">
+
+<div class="section-top">
+
+<div>
+
+<span class="kicker" style="color:#d4e4db;">
+Бронювання
+</span>
+
+<h2>
+Готові до подорожі?
+</h2>
+
+</div>
+
+<p style="color:rgba(255,255,255,.7);">
+Заповніть форму та розрахуйте
+орієнтовну вартість.
+</p>
+
+</div>
+
+
+<div class="booking-grid">
+
+
+<div class="contact-box">
+
+<h3>
+Зв'яжіться з нами
+</h3>
+
+<p>
+Підберемо маршрут під ваші дати
+та побажання.
+</p>
+
+
+<div class="contact-line">
+
+<small>
+Телефон
+</small>
+
+<a href="tel:+420723677258">
+
+<strong>
++420 723 677 258
+</strong>
+
+</a>
+
+</div>
+
+
+<div class="contact-line">
+
+<small>
+Місто
+</small>
+
+<strong>
+Карлові Вари, Чехія
+</strong>
+
+</div>
+
+
+<div class="contact-line">
+
+<small>
+Формати
+</small>
+
+<strong>
+Екскурсії · Wellness · Вікенд
+</strong>
+
+</div>
+
+</div>
+
+
+<form class="booking-form" id="bookingForm">
+
+
+<div class="form-grid">
+
+<label>
+
+Ваше ім'я
+
+<input
+type="text"
+id="name"
+required
+placeholder="Ваше ім'я"
+>
+
+</label>
+
+
+<label>
+
+Телефон
+
+<input
+type="tel"
+id="phone"
+required
+placeholder="+420..."
+>
+
+</label>
+
+</div>
+
+
+<div class="form-grid">
+
+<label>
+
+Тур
+
+<select id="tourSelect">
+
+<option value="35">
+Класичний Карлові Вари — 35 €
+</option>
+
+<option value="25">
+Колонади та джерела — 25 €
+</option>
+
+<option value="45">
+Зелений Карлові Вари — 45 €
+</option>
+
+<option value="55">
+Термальний релакс — 55 €
+</option>
+
+<option value="30">
+Архітектурна історія — 30 €
+</option>
+
+<option value="129">
+Вікенд — 129 €
+</option>
+
+</select>
+
+</label>
+
+
+<label>
+
+Кількість людей
+
+<input
+type="number"
+id="people"
+min="1"
+value="2"
+>
+
+</label>
+
+</div>
+
+
+<div class="form-grid">
+
+<label>
+
+Дата
+
+<input
+type="date"
+id="date"
+>
+
+</label>
+
+
+<label>
+
+Мова
+
+<select id="language">
+
+<option>
+Українська
+</option>
+
+<option>
+Чеська
+</option>
+
+<option>
+Англійська
+</option>
+
+</select>
+
+</label>
+
+</div>
+
+
+<label>
+
+Ваші побажання
+
+<textarea
+id="message"
+placeholder="Напишіть свої побажання"
+></textarea>
+
+</label>
+
+
+<div class="total-box">
+
+<span>
+Орієнтовна вартість
+</span>
+
+<strong id="total">
+70 €
+</strong>
+
+</div>
+
+
+<button
+class="btn btn-primary"
+type="submit"
+>
+Сформувати заявку →
+</button>
+
+
+</form>
+
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer">
+
+
+<div>
+
+<h3>
+Karlovy Vary Travel
+</h3>
+
+<p>
+Тури та відпочинок
+у Карлових Варах.
+</p>
+
+</div>
+
+
+<div>
+
+<h4>
+Навігація
+</h4>
+
+<p>
+
+<a href="#tours">
+Тури
+</a>
+<br>
+
+<a href="#about">
+Про місто
+</a>
+<br>
+
+<a href="#gallery">
+Галерея
+</a>
+
+</p>
+
+</div>
+
+
+<div>
+
+<h4>
+Контакти
+</h4>
+
+<p>
+
+<a href="tel:+420723677258">
++420 723 677 258
+</a>
+
+<br>
+
+Карлові Вари, Чехія
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 Karlovy Vary Travel
+
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- TOUR MODAL -->
+
+<div class="modal" id="tourModal">
+
+<div class="modal-content">
+
+<button
+class="close-modal"
+id="closeModal"
+>
+×
+</button>
+
+<span class="kicker">
+Деталі туру
+</span>
+
+<h2 id="modalTitle">
+Тур
+</h2>
+
+<p id="modalText">
+Опис туру
+</p>
+
+<br>
+
+<a
+href="#booking"
+class="btn btn-primary"
+id="modalBooking"
+>
+Забронювати тур
+</a>
+
+</div>
+
+</div>
+
+
+<!-- IMAGE LIGHTBOX -->
+
+<div class="lightbox" id="lightbox">
+
+<button
+class="close-lightbox"
+id="closeLightbox"
+>
+×
+</button>
+
+<img
+id="lightboxImage"
+src=""
+alt=""
+>
+
+</div>
+
+
+<script>
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+const menuButton =
+document.getElementById("menuButton");
+
+const navLinks =
+document.getElementById("navLinks");
+
+menuButton.addEventListener("click", function(){
+
+    navLinks.classList.toggle("show");
+
+});
+
+
+navLinks
+.querySelectorAll("a")
+.forEach(function(link){
+
+    link.addEventListener("click", function(){
+
+        navLinks.classList.remove("show");
+
+    });
+
+});
+
+
+/* =========================
+   TOUR FILTER
+========================= */
+
+const filters =
+document.querySelectorAll(".filter");
+
+const tours =
+document.querySelectorAll(".tour");
+
+
+filters.forEach(function(filter){
+
+    filter.addEventListener("click", function(){
+
+        filters.forEach(function(item){
+
+            item.classList.remove("active");
+
+        });
+
+        filter.classList.add("active");
+
+        const category =
+        filter.dataset.filter;
+
+
+        tours.forEach(function(tour){
+
+            if(category === "all"){
+
+                tour.classList.remove("hide");
+
+            }
+            else{
+
+                const categories =
+                tour.dataset.category.split(" ");
+
+                if(categories.includes(category)){
+
+                    tour.classList.remove("hide");
+
+                }
+                else{
+
+                    tour.classList.add("hide");
+
+                }
+
+            }
+
+        });
+
+    });
+
+});
+
+
+/* =========================
+   TOUR MODAL
+========================= */
+
+const modal =
+document.getElementById("tourModal");
+
+const modalTitle =
+document.getElementById("modalTitle");
+
+const modalText =
+document.getElementById("modalText");
+
+const closeModal =
+document.getElementById("closeModal");
+
+
+document
+.querySelectorAll(".details")
+.forEach(function(button){
+
+    button.addEventListener("click", function(){
+
+        modalTitle.textContent =
+        button.dataset.title;
+
+        modalText.textContent =
+        button.dataset.text;
+
+        modal.classList.add("active");
+
+    });
+
+});
+
+
+closeModal.addEventListener("click", function(){
+
+    modal.classList.remove("active");
+
+});
+
+
+modal.addEventListener("click", function(event){
+
+    if(event.target === modal){
+
+        modal.classList.remove("active");
+
+    }
+
+});
+
+
+/* =========================
+   GALLERY LIGHTBOX
+========================= */
+
+const lightbox =
+document.getElementById("lightbox");
+
+const lightboxImage =
+document.getElementById("lightboxImage");
+
+const closeLightbox =
+document.getElementById("closeLightbox");
+
+
+document
+.querySelectorAll(".gallery-item img")
+.forEach(function(image){
+
+    image.addEventListener("click", function(){
+
+        lightboxImage.src =
+        image.src;
+
+        lightboxImage.alt =
+        image.alt;
+
+        lightbox.classList.add("active");
+
+    });
+
+});
+
+
+closeLightbox.addEventListener("click", function(){
+
+    lightbox.classList.remove("active");
+
+});
+
+
+lightbox.addEventListener("click", function(event){
+
+    if(event.target === lightbox){
+
+        lightbox.classList.remove("active");
+
+    }
+
+});
+
+
+/* =========================
+   FAQ
+========================= */
+
+document
+.querySelectorAll(".faq-question")
+.forEach(function(question){
+
+    question.addEventListener("click", function(){
+
+        question
+        .parentElement
+        .classList.toggle("active");
+
+    });
+
+});
+
+
+/* =========================
+   PRICE CALCULATOR
+========================= */
+
+const tourSelect =
+document.getElementById("tourSelect");
+
+const people =
+document.getElementById("people");
+
+const total =
+document.getElementById("total");
+
+
+function calculatePrice(){
+
+    const price =
+    Number(tourSelect.value);
+
+    const count =
+    Math.max(
+        1,
+        Number(people.value) || 1
+    );
+
+    total.textContent =
+    (price * count) + " €";
+
+}
+
+
+tourSelect.addEventListener(
+    "change",
+    calculatePrice
+);
+
+
+people.addEventListener(
+    "input",
+    calculatePrice
+);
+
+
+calculatePrice();
+
+
+/* =========================
+   BOOKING FORM
+========================= */
+
+const bookingForm =
+document.getElementById("bookingForm");
+
+
+bookingForm.addEventListener(
+"submit",
+function(event){
+
+    event.preventDefault();
+
+
+    const name =
+    document
+    .getElementById("name")
+    .value
+    .trim();
+
+
+    const phone =
+    document
+    .getElementById("phone")
+    .value
+    .trim();
+
+
+    const tour =
+    tourSelect
+    .options[
+        tourSelect.selectedIndex
+    ]
+    .text;
+
+
+    const count =
+    people.value;
+
+
+    const date =
+    document
+    .getElementById("date")
+    .value
+    || "Не вказана";
+
+
+    const language =
+    document
+    .getElementById("language")
+    .value;
+
+
+    const message =
+    document
+    .getElementById("message")
+    .value
+    .trim()
+    || "Без додаткових побажань";
+
+
+    const emailText =
+`Вітаю!
+
+Хочу дізнатися про тур до Карлових Варів.
+
+Ім'я: ${name}
+Телефон: ${phone}
+Тур: ${tour}
+Кількість людей: ${count}
+Дата: ${date}
+Мова: ${language}
+
+Побажання:
+${message}`;
+
+
+    const mailto =
+    "mailto:" +
+    "?subject=" +
+    encodeURIComponent(
+        "Заявка на тур до Карлових Варів"
+    ) +
+    "&body=" +
+    encodeURIComponent(emailText);
+
+
+    window.location.href =
+    mailto;
+
+});
+
+
+/* =========================
+   ESC KEY
+========================= */
+
+document.addEventListener(
+"keydown",
+function(event){
+
+    if(event.key === "Escape"){
+
+        modal.classList.remove("active");
+
+        lightbox.classList.remove("active");
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
